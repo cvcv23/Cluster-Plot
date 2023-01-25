@@ -2,4 +2,5 @@ ggplot(dfPc1O, aes(x = Age, y = value, color = variable)) +
   geom_smooth(aes(size = thick_line), method = "loess", se=FALSE) +
   scale_size_manual(values = c("Thick" = 2, "Thin" = 0.1)) + 
   theme_minimal() + theme(legend.position = "none") +
-  scale_color_manual(values = rep("green",nlevels(dfPc1O$variable)))
+  scale_color_manual(values = rep("green",nlevels(dfPc1O$variable))) +
+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))
